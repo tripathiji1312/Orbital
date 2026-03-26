@@ -14,7 +14,7 @@ export function useFeatures(satellites, selectedSatellite) {
     islLinks: false,
     launches: false,
     heatmap: false,
-    all3dModels: false,
+    all3dModels: true,
   });
 
   const [debrisData, setDebrisData] = useState([]);

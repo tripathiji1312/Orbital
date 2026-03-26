@@ -344,12 +344,33 @@ input { font-family: inherit; border: none; outline: none; background: none; col
   background: rgba(255,255,255,0.15); 
   transform: scale(1.1);
 }
+
+/* Operational status badge */
+.op-badge {
+  font-size: .65rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  letter-spacing: .08em;
+}
+
+/* Section grouping */
+.detail-section {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-glass);
+}
+.detail-section:last-child {
+  border-bottom: none;
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   background: var(--border-glass); /* creates 1px border between items */
   padding: 1px;
+  margin: 0 -24px;
 }
 .detail-item {
   padding: 16px 24px;
@@ -359,6 +380,8 @@ input { font-family: inherit; border: none; outline: none; background: none; col
   grid-column: span 2; 
   background: transparent;
   border-bottom: 1px solid var(--border-glass);
+  padding: 16px 24px;
+  margin: 0;
 }
 .detail-label {
   display: block;
@@ -373,6 +396,8 @@ input { font-family: inherit; border: none; outline: none; background: none; col
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: .02em;
+  line-height: 1.4;
+  word-break: break-word;
 }
 .detail-value.lg {
   font-size: 1.5rem;
@@ -394,6 +419,28 @@ input { font-family: inherit; border: none; outline: none; background: none; col
   transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
   border-radius: 2px;
 }
+
+/* Link styling */
+.detail-link {
+  display: block;
+  margin: 16px 24px;
+  padding: 10px 14px;
+  font-size: .75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.3s var(--ease);
+  background: var(--accent-dim);
+}
+.detail-link:hover {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 12px var(--accent-dim);
+}
+
 .track-btn {
   margin: 24px;
   padding: 16px 0;
